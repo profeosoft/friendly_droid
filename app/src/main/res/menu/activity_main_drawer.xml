@@ -5,8 +5,7 @@
         <item
             android:id="@+id/nav_calc"
             android:icon="@drawable/ic_menu_send"
-            android:title="Instant quote"
-           />
+            android:title="Instant quote" />
         <item
             android:id="@+id/nav_booking"
             android:icon="@drawable/ic_menu_send"

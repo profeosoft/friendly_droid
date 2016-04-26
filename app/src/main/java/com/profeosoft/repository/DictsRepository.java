@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class DictsRepository {
 
-    public DictsRepository(){
+    public DictsRepository() {
     }
 
     public List<String> getItemsByDictName(String dictName) {
@@ -55,12 +55,9 @@ public class DictsRepository {
             } else if (dictName.equals(Helper.PICK_UP_STORAGE)) {
                 list.add("Yes");
                 list.add("No");
-            } else if (dictName.equals(Helper.PICK_UP_SURVEY)) {
-                list.add("Yes");
-                list.add("No");
             }
             return list;
-        } catch(Exception ex){
+        } catch (Exception ex) {
             throw ex;
         }
     }

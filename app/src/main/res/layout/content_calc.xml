@@ -17,29 +17,203 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.09"
         android:stretchColumns="1">
-        <TableRow>
-            <EditText
-                android:layout_width="match_parent"
+        <TableRow android:baselineAligned="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="From..."
-                android:ems="10"
                 android:id="@+id/fromText"
-                android:layout_weight="0.09" />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="To..."
-                android:ems="10"
-                android:id="@+id/toText"
-                android:layout_weight="0.09" />
+                android:hint="From..."
+                android:layout_span="2" />
         </TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/toText"
+                android:hint="To..."
+                android:layout_span="2" />
+        </TableRow>
+
+            <TabHost
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tabHost">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"></TabWidget>
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:text="Property Type:"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <Spinner
+                                android:id="@+id/spinnerPickUpPropertyType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:spinnerMode="dropdown" />
+
+                            <TextView
+                                android:text="Furnished:"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                            <Spinner
+                                android:layout_span="2"
+                                android:id="@+id/spinnerPickUpFurnished"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:text="Stairs:"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                            <Spinner
+                                android:id="@+id/spinnerPickUpStairsLift"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:text="Van to door dist:"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                            <Spinner
+                                android:id="@+id/spinnerPickUpVanToDoorDistance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:text="Is packing:"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                            <Spinner
+                                android:id="@+id/spinnerPickUpPacking"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:text="Is dismantle:"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                            <Spinner
+                                android:id="@+id/spinnerPickUpDismantle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:text="Is storage:"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                            <Spinner
+                                android:id="@+id/spinnerPickUpStorage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <TextView
+                                android:text="Is stairs:"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                            <Spinner
+                                android:id="@+id/spinnerDestStairsLift"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:text="Van to door dist:"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                            <Spinner
+                                android:id="@+id/spinnerDestVanToDoorDistance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:text="Is assembling:"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                            <Spinner
+                                android:id="@+id/spinnerDestAssembling"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName"
+                                android:hint="Name..."
+                                android:ems="10"
+                                android:id="@+id/destPersonNameText"
+                                android:layout_weight="0.09" />
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="phone"
+                                android:hint="Phone..."
+                                android:ems="10"
+                                android:id="@+id/destPhoneText"
+                                android:layout_weight="0.09" />
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Mail..."
+                                android:ems="10"
+                                android:id="@+id/destEmailText"
+                                android:layout_weight="0.09"
+                                android:inputType="textEmailAddress" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tabSummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvSummary"
+                                android:text="Costs = "
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+                </LinearLayout>
+            </TabHost>
+
+        <!--
         <TableRow>
             <Spinner
                 android:id="@+id/spinnerPickUpPropertyType"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown" />
             <Spinner
                 android:id="@+id/spinnerDestStairsLift"
                 android:layout_width="match_parent"
@@ -87,7 +261,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="phone"
                 android:text="Phone..."
                 android:ems="10"
                 android:id="@+id/destPhoneText"
@@ -101,11 +275,11 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
                 android:text="Mail..."
                 android:ems="10"
                 android:id="@+id/destEmailText"
-                android:layout_weight="0.09" />
+                android:layout_weight="0.09"
+                android:inputType="textEmailAddress" />
         </TableRow>
         <TableRow>
             <Spinner
@@ -119,5 +293,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </TableRow>
+        -->
     </TableLayout>
 </RelativeLayout>

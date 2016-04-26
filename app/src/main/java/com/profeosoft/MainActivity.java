@@ -14,8 +14,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.friendly.ps.friendly.R;
-
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -83,19 +81,14 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        // Calculation
-        if(id==R.id.nav_calc) {
+        if (id == R.id.nav_calc) {
+            // Calculation
             Intent calcIntent = new Intent(MainActivity.this, CalcActivity.class);
             calcIntent.putExtra("key", 100);
             MainActivity.this.startActivity(calcIntent);
-        }
-        // Booking
-        if(id==R.id.nav_booking) {
-
-        }
-
-
-        if (id == R.id.nav_camera) {
+        } else if (id == R.id.nav_booking) {
+            // Booking
+        } else if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
